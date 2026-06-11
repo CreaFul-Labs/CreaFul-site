@@ -1,0 +1,378 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* =========================
+BODY
+========================= */
+
+body {
+font-family: 'Inter', sans-serif;
+background: #0b0f1a;
+color: #cbd5e1;
+overflow-x: hidden;
+line-height: 1.7;
+}
+
+/* =========================
+BACKGROUND GLOW
+========================= */
+
+.bg-glow {
+position: fixed;
+width: 800px;
+height: 800px;
+
+background:
+radial-gradient(
+circle,
+rgba(79,195,247,0.12),
+transparent 70%
+);
+
+top: -200px;
+left: -200px;
+
+z-index: -1;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+
+padding: 24px 60px;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+background: rgba(11,15,26,0.85);
+backdrop-filter: blur(12px);
+
+z-index: 1000;
+}
+
+.logo {
+color: white;
+font-size: 1rem;
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+
+.navbar nav {
+display: flex;
+gap: 30px;
+}
+
+.navbar nav a {
+color: #9aa4ad;
+text-decoration: none;
+font-size: 0.95rem;
+transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+color: white;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+min-height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 140px 20px 80px;
+
+text-align: center;
+
+animation: fadeIn 1s ease forwards;
+}
+
+.hero-content {
+max-width: 850px;
+}
+
+.eyebrow {
+color: #4fc3f7;
+
+font-size: 0.85rem;
+
+letter-spacing: 2px;
+
+text-transform: uppercase;
+
+margin-bottom: 20px;
+}
+
+/* =========================
+HEADINGS
+========================= */
+
+h1 {
+font-size: 4rem;
+line-height: 1.1;
+
+color: white;
+
+margin-bottom: 30px;
+}
+
+h2 {
+font-size: 1.3rem;
+font-weight: 500;
+
+color: #4fc3f7;
+
+margin-bottom: 12px;
+}
+
+h3 {
+color: white;
+font-size: 1.2rem;
+margin-bottom: 15px;
+}
+
+/* =========================
+TEXT
+========================= */
+
+p {
+color: #9aa4ad;
+margin-bottom: 14px;
+}
+
+.lead {
+color: white;
+font-size: 1.4rem;
+margin-bottom: 20px;
+}
+
+.intro {
+font-size: 1.2rem;
+line-height: 1.8;
+
+color: #b6c2cf;
+
+max-width: 760px;
+
+margin: 0 auto 40px;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+
+flex-wrap: wrap;
+}
+
+.btn-outline {
+padding: 14px 28px;
+
+border: 1px solid rgba(79,195,247,0.5);
+
+border-radius: 8px;
+
+text-decoration: none;
+
+color: white;
+
+background: rgba(79,195,247,0.05);
+
+transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+background: rgba(79,195,247,0.15);
+
+border-color: #4fc3f7;
+
+transform: translateY(-2px);
+}
+
+/* =========================
+OVERVIEW SECTION
+========================= */
+
+.overview {
+padding: 100px 40px;
+}
+
+.overview-grid {
+max-width: 1200px;
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 30px;
+}
+
+.overview-card {
+padding: 35px;
+
+border: 1px solid rgba(255,255,255,0.08);
+
+background: rgba(255,255,255,0.02);
+
+border-radius: 12px;
+
+transition: 0.3s ease;
+}
+
+.overview-card:hover {
+transform: translateY(-4px);
+
+border-color: rgba(79,195,247,0.3);
+}
+
+.overview-card p {
+margin-bottom: 0;
+}
+
+/* =========================
+MISSION PAGE
+========================= */
+
+.mission {
+max-width: 720px;
+
+margin: auto;
+
+text-align: left;
+
+align-items: flex-start;
+}
+
+.content-block {
+margin-top: 80px;
+}
+
+.highlight {
+color: white;
+font-weight: 500;
+}
+
+/* =========================
+GENERIC PAGE LAYOUT
+========================= */
+
+.full-section {
+max-width: 900px;
+
+margin: auto;
+
+padding: 140px 20px 100px;
+}
+
+/* =========================
+BACK BUTTON
+========================= */
+
+.back-btn {
+display: inline-block;
+
+margin-bottom: 40px;
+
+color: #4fc3f7;
+
+text-decoration: none;
+
+transition: 0.3s ease;
+}
+
+.back-btn:hover {
+opacity: 0.8;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+text-align: center;
+
+padding: 40px 0;
+
+font-size: 0.8rem;
+
+opacity: 0.5;
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(15px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+.navbar {
+padding: 20px;
+
+```
+flex-direction: column;
+
+gap: 15px;
+```
+
+}
+
+.navbar nav {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+h1 {
+font-size: 2.7rem;
+}
+
+.overview-grid {
+grid-template-columns: 1fr;
+}
+
+.buttons {
+flex-direction: column;
+}
+
+.full-section {
+padding-top: 160px;
+}
+
+}
